@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riva Chauhan | Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+/* Body */
+body{
+  background: linear-gradient(135deg,#1e1e2f,#2c2c44);
+  color:#e0e0e0;
+  scroll-behavior:smooth;
+}
+
+/* Header */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  position:sticky;
+  top:0;
+  background: linear-gradient(135deg,#222240,#2c2c44);
+  z-index:100;
+  box-shadow:0 6px 20px rgba(0,0,0,0.5);
+  border-bottom:2px solid #444466;
+  border-radius:0 0 15px 15px;
+}
+.logo{
+  font-size:1.8rem;
+  font-weight:bold;
+  color:#00d0ff;
+  text-shadow:0 0 10px rgba(0,208,255,0.6);
+}
+.logo span{
+  color:#4a6fff;
+}
+nav ul{
+  display:flex;
+  gap:25px;
+}
+nav ul li{
+  list-style:none;
+}
+nav ul li a{
+  text-decoration:none;
+  color:#e0e0e0;
+  font-weight:500;
+  transition:0.3s;
+  padding:8px 15px;
+  border-radius:12px;
+  position:relative;
+}
+nav ul li a:hover{
+  color:#fff;
+  background: linear-gradient(90deg,#00d0ff,#4a6fff);
+  box-shadow:0 4px 12px rgba(0,208,255,0.3);
+  transform:translateY(-2px);
+}
+nav ul li a.active{
+  color:#fff;
+  background: linear-gradient(90deg,#009ad6,#4a6fff);
+  box-shadow:0 4px 12px rgba(0,208,255,0.5);
+}
+
+/* Hero */
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  padding:0 8%;
+  flex-wrap:wrap;
+  gap:50px;
+}
+.hero-content{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.hero-text h1{
+  font-size:3rem;
+  color:#00d0ff;
+  margin-bottom:15px;
+  text-shadow:0 0 15px rgba(0,208,255,0.6);
+}
+.hero-text p{
+  font-size:1.2rem;
+  color:#bbb;
+  margin-bottom:25px;
+  line-height:1.5;
+}
+.hero-text p span{
+  color:#4a6fff;
+  font-weight:bold;
+  position:relative;
+}
+.hero-text p span::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-3px;
+  width:100%;
+  height:2px;
+  background:#00d0ff;
+  border-radius:2px;
+  opacity:0.6;
+}
+
+/* Buttons */
+.btn{
+  padding:12px 25px;
+  background: linear-gradient(90deg,#00d0ff,#4a6fff);
+  color:#fff;
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.3s;
+  display:inline-block;
+  box-shadow:0 4px 15px rgba(0,208,255,0.3);
+  position:relative;
+  overflow:hidden;
+}
+.btn::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background: linear-gradient(45deg,#00d0ff,#4a6fff,#00d0ff,#4a6fff);
+  animation: animate 4s linear infinite;
+  z-index:0;
+  filter: blur(30px);
+}
+.btn:hover::before{filter: blur(40px);}
+.btn span{position:relative; z-index:1;}
+@keyframes animate{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+/* Additional Intro */
+.hero-extra{
+  margin-top:20px;
+  font-size:1rem;
+  color:#bbb;
+  max-width:600px;
+  text-align:center;
+  line-height:1.6;
+}
+
+/* Hero Image */
+.hero-img img{
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  margin:0 auto;
+  border:5px solid #00d0ff;
+  box-shadow:0 0 40px rgba(0,208,255,0.6);
+  transition:0.3s;
+}
+.hero-img img:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 50px rgba(0,208,255,0.8);
+}
+
+/* Footer */
+footer{
+  background:#222240;
+  text-align:center;
+  padding:20px 0;
+  margin-top:50px;
+  color:#888;
+  font-size:0.9rem;
+  box-shadow:0 -4px 10px rgba(0,0,0,0.3);
+  border-top:2px solid #444466;
+  border-radius:15px 15px 0 0;
+}
+footer .social-icons{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+footer .social-icons a{
+  color:#00d0ff;
+  font-size:1.2rem;
+  transition:0.3s;
+}
+footer .social-icons a:hover{
+  color:#4a6fff;
+  transform:scale(1.2);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero-text h1{font-size:2.2rem;}
+  .hero-text p{font-size:1rem;}
+  .hero-img img{width:200px;height:200px;}
+  .hero-extra{font-size:0.95rem;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Sulekha <span>Chauhan</span></div>
+<nav>
+<ul>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+<div class="hero-content">
+<div class="hero-text">
+<h1>Hello, I'm Sulekha</h1>
+<p>Full Stack Web Developer | <span>MERN Stack Enthusiast</span> | UI/UX Lover</p>
+<a href="projects.html" class="btn"><span>View My Work</span></a>
+<div class="hero-extra">
+<p>Creating <span>beautiful, responsive, and interactive</span> web applications that blend <span>creativity</span> and <span>clean code</span>. I aim to deliver projects that are <span>visually appealing</span> and highly functional.</p>
+</div>
+</div>
+<div class="hero-img">
+<img src="sulekha.jpg" alt="Sulekha Chauhan">
+</div>
+</div>
+</section>
+
+<footer>
+© 2025 Sulekha Chauhan | All Rights Reserved
+<div class="social-icons">
+  <a href="https://github.com/Sulekha550"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/sulekha-chauhan-4648a130b/"><i class="fab fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/sc.6083?igsh=MWd2N2xydnhrbGZneQ=="><i class="fa-brands fa-instagram"></i></a>
+</div>
+</footer>
+
+</body>
+</html>

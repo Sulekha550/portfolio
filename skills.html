@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riva Chauhan | Skills</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background: linear-gradient(135deg, #1f1f2e, #2a2a3d);
+  color:#e0e0e0;
+  scroll-behavior:smooth;
+}
+header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 8%;position:sticky;top:0;background:#1b1b2a;
+  z-index:100;box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+.logo{font-size:1.8rem;font-weight:bold;color:#00d0ff;} 
+nav ul{display:flex;gap:25px;} 
+nav ul li{list-style:none;} 
+nav ul li a{text-decoration:none;color:#e0e0e0;font-weight:500;transition:0.3s;} 
+nav ul li a:hover, nav ul li a.active{color:#00d0ff;}
+
+section{padding:80px 8%;max-width:1000px;margin:0 auto;text-align:center;}
+section h1{
+  font-size:2.5rem;
+  background: linear-gradient(90deg, #00d0ff, #ff6ec7, #00ffb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:50px;
+}
+
+.skill-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;
+}
+
+.skill-card{
+  background: linear-gradient(145deg, #252536, #33334a);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 4px 20px rgba(0,208,255,0.1);
+  transition:0.3s;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+}
+.skill-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 6px 25px rgba(0,208,255,0.4);
+}
+.skill-card i{
+  font-size:3rem;color:#00d0ff;margin-bottom:15px;
+  background: linear-gradient(90deg, #00d0ff, #ff6ec7, #00ffb0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.skill-card h3{color:#00d0ff;margin-bottom:10px;}
+.skill-card p{color:#ccc;font-size:0.95rem;}
+
+footer{
+  background:#1b1b2a;text-align:center;padding:20px 0;margin-top:50px;
+  color:#888;font-size:0.9rem;
+}
+
+@media(max-width:768px){
+  section h1{font-size:2.2rem;}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Sulekha <span>Chauhan</span></div>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html" class="active">Skills</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section>
+<h1>My Skills</h1>
+<div class="skill-grid">
+<div class="skill-card"><i class="fab fa-html5"></i><h3>HTML</h3><p>Semantic & modern markup</p></div>
+<div class="skill-card"><i class="fab fa-css3-alt"></i><h3>CSS</h3><p>Flexbox, Grid, Animations</p></div>
+<div class="skill-card"><i class="fab fa-js-square"></i><h3>JavaScript</h3><p>DOM & ES6+</p></div>
+<div class="skill-card"><i class="fab fa-react"></i><h3>React</h3><p>SPA & Components</p></div>
+<div class="skill-card"><i class="fab fa-node-js"></i><h3>Express.js</h3><p>Server-side logic</p></div>
+<div class="skill-card"><i class="fas fa-database"></i><h3>MongoDB</h3><p>Database & CRUD</p></div>
+</div>
+</section>
+
+<footer>
+© 2025 Sulekha Chauhan | All Rights Reserved
+</footer>
+</body>
+</html>

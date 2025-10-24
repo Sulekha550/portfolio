@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | Riva Chauhan</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:#2a2a3d;
+  color:#e0e0e0;
+  scroll-behavior:smooth;
+}
+
+/* Header */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  position:sticky;
+  top:0;
+  background:#1f1f33;
+  z-index:100;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  border-radius:0 0 15px 15px;
+}
+.logo{
+  font-size:1.8rem;
+  font-weight:bold;
+  color:#00d0ff;
+}
+.logo span{
+  color:#fff;
+}
+nav ul{
+  display:flex;
+  gap:25px;
+}
+nav ul li{
+  list-style:none;
+}
+nav ul li a{
+  text-decoration:none;
+  color:#e0e0e0;
+  font-weight:500;
+  transition:0.3s;
+  padding:8px 15px;
+  border-radius:8px;
+}
+nav ul li a:hover,
+nav ul li a.active{
+  color:#fff;
+  background: linear-gradient(90deg,#00d0ff,#6e00ff);
+  box-shadow:0 4px 12px rgba(0,208,255,0.2);
+}
+
+/* About Hero */
+.about-hero{
+  padding:80px 8%;
+  text-align:center;
+}
+.about-hero h1{
+  font-size:2.8rem;
+  color:#00d0ff;
+  margin-bottom:20px;
+  text-shadow:0 0 12px rgba(0,208,255,0.5);
+}
+.about-hero p{
+  font-size:1.2rem;
+  color:#ccc;
+  line-height:1.6;
+  max-width:700px;
+  margin:0 auto;
+}
+
+/* About Content */
+.about-content{
+  display:flex;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:60px 8%;
+}
+.about-text{
+  max-width:600px;
+}
+.about-text h2{
+  font-size:2rem;
+  color:#00d0ff;
+  margin-bottom:20px;
+}
+.about-text p{
+  color:#ddd;
+  line-height:1.7;
+  font-size:1rem;
+  margin-bottom:15px;
+}
+.about-text a{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  background:linear-gradient(90deg,#00d0ff,#6e00ff);
+  border-radius:8px;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+.about-text a:hover{
+  box-shadow:0 0 15px rgba(0,208,255,0.5);
+}
+
+/* Profile Image */
+.about-img img{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #00d0ff;
+  box-shadow:0 0 30px rgba(0,208,255,0.5);
+  transition:0.3s;
+}
+.about-img img:hover{
+  transform:scale(1.05);
+}
+
+/* Cards Section */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
+  padding:60px 8%;
+}
+.card{
+  background:#363648;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,208,255,0.15);
+  transition:0.3s;
+  max-width:300px;
+  text-align:center;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 25px rgba(0,208,255,0.3);
+}
+.card h3{
+  color:#00d0ff;
+  margin-bottom:15px;
+  font-size:1.3rem;
+}
+.card p{
+  color:#ddd;
+  font-size:1rem;
+  line-height:1.6;
+}
+
+/* Achievements Section */
+#achievements {
+  padding:80px 8%;
+  background:#1e1e2f;
+  color:white;
+  text-align:center;
+}
+#achievements h2 {
+  font-size:2.4rem;
+  margin-bottom:40px;
+  color:#ffb400;
+  text-shadow:0 0 10px rgba(255,180,0,0.6);
+}
+.certificate-container {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+.certificate p {
+  background:#2a2a3d;
+  padding:15px 25px;
+  border-radius:10px;
+  box-shadow:0 0 8px rgba(255,255,255,0.1);
+  max-width:600px;
+  text-align:center;
+}
+.certificate a {
+  color: #00d0ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition:0.3s;
+}
+.certificate a:hover {
+  color:#ffb400;
+  text-shadow:0 0 8px rgba(255,180,0,0.5);
+}
+
+/* Footer */
+footer{
+  background:#1f1f33;
+  text-align:center;
+  padding:25px 0;
+  margin-top:50px;
+  color:#aaa;
+  font-size:0.9rem;
+  box-shadow:0 -4px 10px rgba(0,0,0,0.05);
+  border-top:2px solid #00d0ff40;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .about-hero h1{font-size:2.2rem;}
+  .about-hero p{font-size:1rem;}
+  .about-text h2{font-size:1.8rem;}
+  .about-img img{width:220px;height:220px;}
+  .cards{gap:20px;padding:40px 5%;}
+  .card{max-width:250px;}
+  #achievements h2{font-size:1.8rem;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Sulekha <span>Chauhan</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="contact.html">Contact</a></li>         
+    </ul>
+  </nav>
+</header>
+
+<!-- About Hero Section -->
+<section class="about-hero">
+  <h1>About Me</h1>
+  <p>Hi! I'm <b>Sulekha Chauhan</b>, a passionate Full Stack Web Developer specializing in MERN stack. I love designing interactive, responsive, and user-friendly web applications. My goal is to write clean code while delivering visually appealing designs.</p>
+</section>
+
+<!-- About Content -->
+<section class="about-content">
+  <div class="about-text">
+    <h2>Who I Am</h2>
+    <p>I am a dedicated and curious web developer who constantly seeks to improve skills and stay updated with modern technologies. I enjoy working on projects that challenge me to combine creativity and logic.</p>
+    <p>With a strong foundation in HTML, CSS, JavaScript, React, Node.js, and MongoDB, I build projects that are not only functional but also visually engaging.</p>
+    <a href="#achievements">See My Certificates ↓</a>
+  </div>
+  <div class="about-img">
+    <img src="sulekha.jpg" alt="Sulekha Chauhan">
+  </div>
+</section>
+
+<!-- Cards Section -->
+<section class="cards">
+  <div class="card">
+    <h3>Experience</h3>
+    <p>Worked on multiple personal & collaborative projects with MERN stack and front-end frameworks.</p>
+  </div>
+  <div class="card">
+    <h3>Achievements</h3>
+    <p>Completed several online certifications and bootcamps in web development and modern technologies.</p>
+  </div>
+  <div class="card">
+    <h3>Hobbies</h3>
+    <p>Love UI/UX design, experimenting with animations, and exploring new web technologies.</p>
+  </div>
+</section>
+
+<!-- Achievements & Certificates Section -->
+<section id="achievements">
+  <h2>🏆 Achievements & Certificates</h2>
+  <div class="certificate-container">
+
+    <div class="certificate">
+      <p>✅<b>Web Development Bootcamp Of Internship</b> – 
+        <a href="Certificate of internship iit bhu.png" target="_blank">View Certificate</a>
+      </p>
+    </div>
+
+    <div class="certificate">
+      <p>✅ <b>IBM Certificate Of Internship</b> – 
+        <a href="Ibm certificate.png" target="_blank">View Certificate</a>
+      </p>
+    </div>
+
+    <div class="certificate">
+      <p>🏅 3rd Position – <b>Final Year Project Fixify</b> – 
+        <a href="fixify certificate.jpg" target="_blank">View Proof</a>
+      </p>
+    </div>
+
+    
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Sulekha Chauhan | All Rights Reserved
+</footer>
+
+</body>
+</html>
